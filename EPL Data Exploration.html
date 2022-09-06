@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>EPL Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Back To Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="portfolio.html">Data Analysis Portfolio</a></li>
+							
+						</ul>
+						<ul class="icons">
+							<li>
+                                <li><a href="https://in.linkedin.com/in/abdul-rahim-shihabuddin-4b11b021b" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                                <li><a href="https://github.com/AbdulRahimShihabuddin/PortfolioProjects" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">April 20, 2022</span>
+									<h1>SQL Data Exploration &<br />
+										Tableau Dashboard <br />
+										for Player Statistics in English Premier League 2018-2019 season</h1>
+									<p>Analyzing the player statistics who were in 2018-2019 EPL season in SQL in order to create an interactive Tableau dashboard.</p>
+								</header>
+								<div class='tableauPlaceholder' id='viz1662206407565' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;EP&#47;EPLPlayersStatisticsPracticeDashboard&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EPLPlayersStatisticsPracticeDashboard&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;EP&#47;EPLPlayersStatisticsPracticeDashboard&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1662206407565');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1327px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script><p></p>
+								<h2>Data Collection and Manipulation</h2>
+								<p>Data was collected from Kaggle. There were 43 columns. </p>
+								<p></p>
+                                <p>Columns =['full_name', 'age', 'birthday', 'birthday_GMT', 'league', 'season',
+                                    'position', 'Current Club', 'minutes_played_overall',
+                                    'minutes_played_home', 'minutes_played_away', 'nationality',
+                                    'appearances_overall', 'appearances_home', 'appearances_away',
+                                    'goals_overall', 'goals_home', 'goals_away', 'assists_overall',
+                                    'assists_home', 'assists_away', 'penalty_goals', 'penalty_misses',
+                                    'clean_sheets_overall', 'clean_sheets_home', 'clean_sheets_away',
+                                    'conceded_overall', 'conceded_home', 'conceded_away',
+                                    'yellow_cards_overall', 'red_cards_overall',
+                                    'goals_involved_per_90_overall', 'assists_per_90_overall',
+                                    'goals_per_90_overall', 'goals_per_90_home', 'goals_per_90_away',
+                                    'min_per_goal_overall', 'conceded_per_90_overall',
+                                    'min_per_conceded_overall', 'min_per_match', 'min_per_card_overall',
+                                    'min_per_assist_overall', 'cards_per_90_overall'] </p>
+                                <p> Of which 17 columns were derived from other columns. 12 columns of these 
+                                   Columns=[ 'goals_involved_per_90_overall', 'assists_per_90_overall',
+                                    'goals_per_90_overall', 'goals_per_90_home', 'goals_per_90_away',
+                                    'min_per_goal_overall', 'conceded_per_90_overall',
+                                    'min_per_conceded_overall', 'min_per_match', 'min_per_card_overall',
+                                    'min_per_assist_overall', 'cards_per_90_overall'] were deleted and were then reentered using SQL queries and formulas</p>
+								<dl>
+									<dt>Birthday and Birthday_GMT</dt>
+									<dd>
+										<p>Birthday and Birthday_GMT column are not necessary for this particular data analysis as the age of the players are given.</p>
+									</dd>
+		
+			
+								</dl>
+								<h2>Data Exploration in SQL</h2>
+								<p>
+								
+								</p>
+								<p></p>
+								<ul>
+									<li>Bench_strength for different positions in each club</li>
+									<li>Showing the nationality of players</li>
+									<li>Top ten fair players with minutes_played_overall</li>
+									<li>Top goal scorers in the league</li>
+                                    <li>Age and Experience of players in the league</li>
+                                    <li>Top players with more assists and more cleansheets</li>
+								</ul>
+								<p> Only first four columns were considered for data visualisation</p>
+								<h2>Tableau Dashboard</h2>
+								<p>Data was then imported into Tableau for the creation of the dashboard.</p>
+								<dl>
+									<dt>Table Representing Top Goal Scorers In The League</dt>
+									<dd>
+										<p>Table was created using goals_scored_overall column against the name of player. Top 10 goal scores were used for the creation of the chart.</p>
+									</dd>
+									<dt>World Map Representing Nationality of Players</dt>
+									<dd>
+										<p>Map was created using the Nationality of Players, with the Count of Players of same nationality. </p>
+									</dd>
+									<dt>Stacked Bar Chart Representing Bench Strength of Players by Position In Each Team </dt>
+									<dd>
+										<p>Stacked bar chart was created using Count of Players, considering Position column, within each team. </p>
+									</dd>
+									<dt>Horizontal Bar Chart Representing The Top 10 Fair Players In The League   </dt>
+									<dd>
+										<p>Stacked bar chart was created using Count of Players, considering derived column " Minutes_per_card_overall" and "Cards_overall" column. The ones with max minutes_per_card ratio and less number of cards were deemed as fairest player </p>
+									</dd>
+									<dt>Creating the Dashboard</dt>
+									<dd>
+										<p>The Dashboard was then created with these sheets.</p>
+									</dd>
+								</dl>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section class="split contact">
+							<section class="alt">
+								<h3>Location</h3>
+								<p>Thiruvananthapuram, Kerala, India</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">9567345449</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">abdulaburahim157@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+					
+									<li><a href="https://in.linkedin.com/in/abdul-rahim-shihabuddin-4b11b021b" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/AbdulRahimShihabuddin/PortfolioProjects" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
